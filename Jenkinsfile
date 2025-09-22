@@ -1,6 +1,8 @@
 pipeline {
     agent{
-        label 'jenkins/agent'
+        docker {
+            image 'jenkins/agent'
+        }
     }
 
    
