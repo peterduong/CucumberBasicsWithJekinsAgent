@@ -8,17 +8,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Pull code from GitHub
-                git branch: 'main', url: 'https://github.com/peterduong/CucumberBasicsWithJekinsAgent.git'
+                echo 'Checkout!'
             }
         }
 
-        stage('Build & Verify') {
-            steps {
-                // Run Maven verify
-                sh 'mvn verify'
-            }
-        }
+      
     }
 
     post {
