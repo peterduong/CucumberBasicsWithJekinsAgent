@@ -1,5 +1,7 @@
 pipeline {
-    agent any  // Run on any available Jenkins agent
+    agent{
+        label 'jenkins-agent'
+    }
 
    
 
@@ -7,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull code from GitHub
-                git branch: 'main', url: 'https://github.com/peterduong/CucumberBasics.git'
+                git branch: 'main', url: 'https://github.com/peterduong/CucumberBasicsWithJekinsAgent.git'
             }
         }
 
